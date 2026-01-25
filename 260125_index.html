@@ -17,6 +17,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
         
         body {
             font-family: 'Georgia', serif;
@@ -81,23 +85,35 @@
             text-align: center;
         }
 
-        .intro-text ul {
+        .topics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
             text-align: left;
-            display: inline-block;
-            margin: 1.5rem 0;
+            max-width: 600px;
+            margin: 1.5rem auto;
         }
 
-        .intro-text li {
-            margin: 0.5rem 0;
+        .topics-grid a {
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background 0.3s;
+            border-radius: 5px;
+        }
+
+        .topics-grid a:hover {
+            background: var(--cream);
         }
 
         .correction-box {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
+            background: #fff9e6;
+            border: 1px solid #f0d98e;
             border-radius: 8px;
             padding: 1rem;
             margin: 1.5rem 0;
             text-align: center;
+            font-size: 0.95rem;
         }
 
         .correction-box strong {
@@ -120,6 +136,15 @@
             font-weight: bold;
             color: var(--green-dark);
             min-width: 100px;
+        }
+
+        .timeline-item a {
+            color: var(--green-dark);
+            text-decoration: underline;
+        }
+
+        .timeline-item a:hover {
+            color: var(--green-mid);
         }
         
         .hotels {
@@ -177,6 +202,16 @@
         .parking-item h3 {
             color: var(--green-dark);
             margin-bottom: 1rem;
+        }
+
+        .parking-item a {
+            color: var(--green-dark);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .parking-item a:hover {
+            color: var(--green-mid);
         }
         
         button {
@@ -248,6 +283,10 @@
             header h1 {
                 font-size: 2rem;
             }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
             
             .hotels {
                 grid-template-columns: 1fr;
@@ -271,42 +310,43 @@
             <p>11. April 2026</p>
         </header>
 
-        <!-- Foto von euch -->
-        <div class="hero-image">
-            <img src="photo_2025-10-12_07-43-44.jpg" alt="Leonie und Marius">
-        </div>
-
         <!-- Einleitung -->
         <div class="card">
             <div class="intro-text">
                 <p>Wir freuen uns, dass ihr unsere Hochzeitsseite gefunden habt und wollen euch hier weitere Informationen geben.</p>
                 
                 <p style="margin-top: 1.5rem;"><strong>Auf dieser Seite haben wir folgende Themen:</strong></p>
-                <ul>
-                    <li>Tagesablauf</li>
-                    <li>Anmeldeformular (Namen, Essenspräferenzen, Musikwünsche)</li>
-                    <li>Mitgestaltungsmöglichkeiten</li>
-                    <li>Parkmöglichkeiten</li>
-                    <li>Hotels</li>
-                    <li>Einladung zum Downloaden</li>
-                </ul>
+                <div class="topics-grid">
+                    <a href="#tagesablauf">📅 Tagesablauf</a>
+                    <a href="#anmeldung">📝 Anmeldeformular</a>
+                    <a href="#mitgestaltung">🎉 Mitgestaltung</a>
+                    <a href="#parken">🚗 Parkmöglichkeiten</a>
+                    <a href="#hotels">🏨 Hotels</a>
+                    <a href="#einladung">💌 Einladung</a>
+                </div>
 
                 <div class="correction-box">
-                    <strong>⚠️ Wichtiger Hinweis:</strong><br>
-                    Leider haben wir uns in der Einladung verschrieben. Die Party findet im <strong>Mühlenweg 11 in Heidelberg-Ziegelhausen</strong> statt – da hatten sich leider zwei falsche Buchstaben eingeschlichen.
+                    ⚠️ Wichtiger Hinweis: Leider haben wir uns in der Einladung verschrieben. Die Party findet im <strong>Mühlenweg 11 in Heidelberg-Ziegelhausen</strong> statt – da hatten sich leider zwei falsche Buchstaben eingeschlichen.
                 </div>
             </div>
         </div>
 
+        <!-- Foto von euch -->
+        <div class="hero-image">
+            <img src="leonie_marius1.jpg" alt="Leonie und Marius">
+        </div>
+
         <!-- Tagesablauf -->
-        <div class="card">
+        <div class="card" id="tagesablauf">
             <h2>📅 Tagesablauf</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time">12:30 Uhr</span>
                     <div>
                         <strong>Trauung</strong><br>
-                        Jesuitenkirche, Merianstr. 2, 69117 Heidelberg
+                        <a href="https://www.google.com/maps/place/Merianstr.+2,+69117+Heidelberg" target="_blank">
+                            Jesuitenkirche, Merianstr. 2, 69117 Heidelberg
+                        </a>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -320,21 +360,25 @@
                     <span class="time">16:30 Uhr</span>
                     <div>
                         <strong>Ankommen</strong><br>
-                        Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                        <a href="https://www.google.com/maps/place/Mühlenweg+11,+69118+Heidelberg" target="_blank">
+                            Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                        </a>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time">18:30 Uhr</span>
                     <div>
                         <strong>Abendessen</strong><br>
-                        Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                        <a href="https://www.google.com/maps/place/Mühlenweg+11,+69118+Heidelberg" target="_blank">
+                            Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Anmeldeformular -->
-        <div class="card">
+        <div class="card" id="anmeldung">
             <h2>📝 Anmeldeformular</h2>
             <p style="text-align: center; margin-bottom: 1rem;">
                 Bitte füllt unser Formular aus mit euren Namen, Essenspräferenzen und Musikwünschen:
@@ -350,7 +394,7 @@
         </div>
 
         <!-- Mitgestaltung -->
-        <div class="card">
+        <div class="card" id="mitgestaltung">
             <h2>🎉 Mitgestaltung der Hochzeitsfeier</h2>
             <p style="text-align: center; font-size: 1.1rem; margin: 1.5rem 0;">
                 Habt ihr Lust, unsere Feier mitzugestalten? Ob mit einer kleinen Überraschung, 
@@ -377,14 +421,16 @@
         </div>
 
         <!-- Parkmöglichkeiten -->
-        <div class="card">
+        <div class="card" id="parken">
             <h2>🚗 Parkmöglichkeiten</h2>
             <div class="parking-section">
                 <div class="parking-item">
                     <h3>Jesuitenkirche (Innenstadt)</h3>
                     <p>
                         Leider gibt es in der Innenstadt keine kostenfreien Parkmöglichkeiten. 
-                        Wir empfehlen euch das <strong>Parkhaus P11</strong>, welches samstagmittags immer freie Plätze hat. 
+                        Wir empfehlen euch das 
+                        <a href="https://www.google.com/maps/place/Parkhaus+P11,+Heidelberg" target="_blank">Parkhaus P11</a>, 
+                        welches samstagmittags immer freie Plätze hat. 
                         Ihr dürft aber gerne auch ein anderes Parkhaus wählen.
                     </p>
                     <p style="margin-top: 0.8rem; font-style: italic;">
@@ -395,14 +441,17 @@
                 <div class="parking-item">
                     <h3>Pfarrzentrum St Teresa (Ziegelhausen)</h3>
                     <p>
-                        Hier gibt es einen großen <strong>Parkplatz etwa 50m vor dem Pfarrzentrum auf der rechten Seite</strong>.
+                        Hier gibt es einen 
+                        <a href="https://www.google.com/maps/place/Mühlenweg+11,+69118+Heidelberg" target="_blank">
+                            großen Parkplatz etwa 50m vor dem Pfarrzentrum auf der rechten Seite
+                        </a>.
                     </p>
                 </div>
             </div>
         </div>
 
         <!-- Hotels -->
-        <div class="card">
+        <div class="card" id="hotels">
             <h2>🏨 Übernachtungsmöglichkeiten</h2>
             <p style="margin-bottom: 1.5rem; text-align: center;">
                 Hier sind einige Hotelempfehlungen für euch. Natürlich könnt ihr auch andere Hotels in Heidelberg wählen!
@@ -449,7 +498,7 @@
         </div>
 
         <!-- Einladung Download -->
-        <div class="card download-section">
+        <div class="card download-section" id="einladung">
             <h2>💌 Einladung</h2>
             <p>Hier könnt ihr die Einladung nochmal als PDF ansehen oder herunterladen:</p>
             <a href="einladung.pdf" class="download-btn" target="_blank">📄 Einladung ansehen</a>
