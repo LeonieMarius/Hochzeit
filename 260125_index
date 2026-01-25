@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochzeit Leonie & Marius | 11. April 2026</title>
+    <style>
+        :root {
+            --green-dark: #3D5A3D;
+            --green-mid: #6B8E6B;
+            --green-light: #A8C4A8;
+            --cream: #F5F1E8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, var(--green-light), var(--green-dark));
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        header p {
+            font-size: 1.5rem;
+        }
+
+        .hero-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .hero-image img {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: var(--green-dark);
+            border-bottom: 2px solid var(--green-mid);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .intro-text ul {
+            text-align: left;
+            display: inline-block;
+            margin: 1.5rem 0;
+        }
+
+        .intro-text li {
+            margin: 0.5rem 0;
+        }
+
+        .correction-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .correction-box strong {
+            color: #856404;
+        }
+        
+        .timeline {
+            margin: 1.5rem 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 8px;
+        }
+        
+        .timeline-item .time {
+            font-weight: bold;
+            color: var(--green-dark);
+            min-width: 100px;
+        }
+        
+        .hotels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .hotel-item {
+            padding: 1.2rem;
+            background: var(--cream);
+            border-radius: 8px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .hotel-item h3 {
+            color: var(--green-dark);
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .hotel-item p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .hotel-link {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 0.8rem;
+            color: var(--green-dark);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .hotel-link:hover {
+            color: var(--green-mid);
+        }
+
+        .parking-section {
+            margin: 1.5rem 0;
+        }
+
+        .parking-item {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .parking-item h3 {
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+        
+        button {
+            background: var(--green-dark);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: var(--green-mid);
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--green-mid);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: var(--green-dark);
+        }
+        
+        .contact-box {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-method {
+            text-align: center;
+        }
+        
+        .contact-method strong {
+            color: var(--green-dark);
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hotels {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Leonie & Marius</h1>
+            <p>11. April 2026</p>
+        </header>
+
+        <!-- Foto von euch -->
+        <div class="hero-image">
+            <img src="photo_2025-10-12_07-43-44.jpg" alt="Leonie und Marius">
+        </div>
+
+        <!-- Einleitung -->
+        <div class="card">
+            <div class="intro-text">
+                <p>Wir freuen uns, dass ihr unsere Hochzeitsseite gefunden habt und wollen euch hier weitere Informationen geben.</p>
+                
+                <p style="margin-top: 1.5rem;"><strong>Auf dieser Seite haben wir folgende Themen:</strong></p>
+                <ul>
+                    <li>Tagesablauf</li>
+                    <li>Anmeldeformular (Namen, Essenspräferenzen, Musikwünsche)</li>
+                    <li>Mitgestaltungsmöglichkeiten</li>
+                    <li>Parkmöglichkeiten</li>
+                    <li>Hotels</li>
+                    <li>Einladung zum Downloaden</li>
+                </ul>
+
+                <div class="correction-box">
+                    <strong>⚠️ Wichtiger Hinweis:</strong><br>
+                    Leider haben wir uns in der Einladung verschrieben. Die Party findet im <strong>Mühlenweg 11 in Heidelberg-Ziegelhausen</strong> statt – da hatten sich leider zwei falsche Buchstaben eingeschlichen.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagesablauf -->
+        <div class="card">
+            <h2>📅 Tagesablauf</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="time">12:30 Uhr</span>
+                    <div>
+                        <strong>Trauung</strong><br>
+                        Jesuitenkirche, Merianstr. 2, 69117 Heidelberg
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">14:00 Uhr</span>
+                    <div>
+                        <strong>Sektempfang</strong><br>
+                        Eugen-Biser-Saal an der Jesuitenkirche
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">16:30 Uhr</span>
+                    <div>
+                        <strong>Ankommen</strong><br>
+                        Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">18:30 Uhr</span>
+                    <div>
+                        <strong>Abendessen</strong><br>
+                        Pfarrzentrum St Teresa, Mühlenweg 11, 69118 Heidelberg-Ziegelhausen
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anmeldeformular -->
+        <div class="card">
+            <h2>📝 Anmeldeformular</h2>
+            <p style="text-align: center; margin-bottom: 1rem;">
+                Bitte füllt unser Formular aus mit euren Namen, Essenspräferenzen und Musikwünschen:
+            </p>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <iframe src="https://docs.google.com/forms/d/e/EURE-FORM-ID/viewform?embedded=true" 
+                        width="100%" 
+                        height="800" 
+                        frameborder="0">
+                    Wird geladen…
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Mitgestaltung -->
+        <div class="card">
+            <h2>🎉 Mitgestaltung der Hochzeitsfeier</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin: 1.5rem 0;">
+                Habt ihr Lust, unsere Feier mitzugestalten? Ob mit einer kleinen Überraschung, 
+                einem Spiel oder einer anderen schönen Idee – wir freuen uns sehr darüber!
+            </p>
+            
+            <div class="contact-box">
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">
+                    <strong>Meldet euch gerne bei unseren Trauzeugen:</strong>
+                </p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <p style="margin-bottom: 0.5rem;">📧 Per E-Mail</p>
+                        <strong>mitgestalten@fracarolli.de</strong>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <p style="margin-bottom: 0.5rem;">📞 Oder Tamara anrufen</p>
+                        <strong>01578 / 2438631</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parkmöglichkeiten -->
+        <div class="card">
+            <h2>🚗 Parkmöglichkeiten</h2>
+            <div class="parking-section">
+                <div class="parking-item">
+                    <h3>Jesuitenkirche (Innenstadt)</h3>
+                    <p>
+                        Leider gibt es in der Innenstadt keine kostenfreien Parkmöglichkeiten. 
+                        Wir empfehlen euch das <strong>Parkhaus P11</strong>, welches samstagmittags immer freie Plätze hat. 
+                        Ihr dürft aber gerne auch ein anderes Parkhaus wählen.
+                    </p>
+                    <p style="margin-top: 0.8rem; font-style: italic;">
+                        ℹ️ Achtet darauf, dass wir viele Einbahnstraßen und eine große Fußgängerzone haben.
+                    </p>
+                </div>
+                
+                <div class="parking-item">
+                    <h3>Pfarrzentrum St Teresa (Ziegelhausen)</h3>
+                    <p>
+                        Hier gibt es einen großen <strong>Parkplatz etwa 50m vor dem Pfarrzentrum auf der rechten Seite</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotels -->
+        <div class="card">
+            <h2>🏨 Übernachtungsmöglichkeiten</h2>
+            <p style="margin-bottom: 1.5rem; text-align: center;">
+                Hier sind einige Hotelempfehlungen für euch. Natürlich könnt ihr auch andere Hotels in Heidelberg wählen!
+            </p>
+            
+            <div class="hotels">
+                <div class="hotel-item">
+                    <h3>Hotel Neckarlux</h3>
+                    <p><strong>Lage:</strong> Direkt in Ziegelhausen (1,2 km)</p>
+                    <p><strong>Preis:</strong> 191 € / 2 Personen / 2 Nächte</p>
+                    <a href="https://www.booking.com/hotel/de/ambiente-heidelberg.de.html" target="_blank" class="hotel-link">🔗 Zur Buchung</a>
+                </div>
+                
+                <div class="hotel-item">
+                    <h3>Premier Inn Heidelberg</h3>
+                    <p><strong>Lage:</strong> Bergheim (nahe dem Brautpaar)</p>
+                    <p><strong>Preis:</strong> 195 € / 2 Personen / 2 Nächte</p>
+                    <a href="https://www.booking.com/hotel/de/premier-inn-heidelberg-city-centre-heidelberg1.de.html" target="_blank" class="hotel-link">🔗 Zur Buchung</a>
+                </div>
+                
+                <div class="hotel-item">
+                    <h3>Hip Hotel</h3>
+                    <p><strong>Lage:</strong> Altstadt</p>
+                    <p><strong>Preis:</strong> 272 € / 2 Personen / 2 Nächte</p>
+                    <a href="https://www.booking.com/hotel/de/hip.de.html" target="_blank" class="hotel-link">🔗 Zur Buchung</a>
+                </div>
+                
+                <div class="hotel-item">
+                    <h3>Lotte - The Backpackers</h3>
+                    <p><strong>Lage:</strong> Altstadt, nur 400m zur Kirche</p>
+                    <p><strong>Typ:</strong> Hostel (Mehrbettzimmer)</p>
+                    <p><strong>Preis:</strong> 70 € / Person / 2 Nächte</p>
+                    <p style="font-size: 0.9rem; font-style: italic;">Womöglich auch für 6 Personen buchbar</p>
+                    <a href="https://www.booking.com/hotel/de/lotte-the-backpackers.de.html" target="_blank" class="hotel-link">🔗 Zur Buchung</a>
+                </div>
+                
+                <div class="hotel-item">
+                    <h3>Boarding World</h3>
+                    <p><strong>Lage:</strong> Zwischen Altstadt und Bergheim</p>
+                    <p><strong>Preis:</strong> 240 € / 2 Personen / 2 Nächte</p>
+                    <a href="https://www.booking.com/hotel/de/boardingworld-heidelberg.de.html" target="_blank" class="hotel-link">🔗 Zur Buchung</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Einladung Download -->
+        <div class="card download-section">
+            <h2>💌 Einladung</h2>
+            <p>Hier könnt ihr die Einladung nochmal als PDF ansehen oder herunterladen:</p>
+            <a href="einladung.pdf" class="download-btn" target="_blank">📄 Einladung ansehen</a>
+            <a href="einladung.pdf" class="download-btn" download>📥 Einladung herunterladen</a>
+        </div>
+
+        <footer>
+            <p>Wir freuen uns auf euch! ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
