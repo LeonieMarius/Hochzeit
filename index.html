@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hochzeit Leonie & Marius | 11. April 2026</title>
+    <style>
+        :root {
+            --green-dark: #3D5A3D;
+            --green-mid: #6B8E6B;
+            --green-light: #A8C4A8;
+            --cream: #F5F1E8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, var(--green-light), var(--green-dark));
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        header p {
+            font-size: 1.5rem;
+        }
+
+        .hero-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .hero-image img {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: var(--green-dark);
+            border-bottom: 2px solid var(--green-mid);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            text-align: left;
+            max-width: 600px;
+            margin: 1.5rem auto;
+        }
+
+        .topics-grid a {
+            color: var(--green-dark);
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background 0.3s;
+            border-radius: 5px;
+        }
+
+        .topics-grid a:hover {
+            background: var(--cream);
+        }
+
+        .correction-box {
+            background: #fff9e6;
+            border: 1px solid #f0d98e;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .correction-box strong {
+            color: #856404;
+        }
+        
+        .timeline {
+            margin: 1.5rem 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 8px;
+        }
+        
+        .timeline-item .time {
+            font-weight: bold;
+            color: var(--green-dark);
+            min-width: 100px;
+        }
+
+        .timeline-item a {
+            color: var(--green-dark);
+            text-decoration: underline;
+        }
+
+        .timeline-item a:hover {
+            color: var(--green-mid);
+        }
+
+        .parking-section {
+            margin: 1.5rem 0;
+        }
+
+        .parking-item {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .parking-item h3 {
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+
+        .parking-item a {
+            color: var(--green-dark);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .parking-item a:hover {
+            color: var(--green-mid);
+        }
+
+        .info-box {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+
+        .info-box p {
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bus-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .bus-table th {
+            background: var(--green-dark);
+            color: white;
+            padding: 0.7rem 1rem;
+            text-align: left;
+        }
+
+        .bus-table td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #e0ddd5;
+        }
+
+        .bus-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .bus-table tr:nth-child(even) td {
+            background: #f9f7f2;
+        }
+
+        .contact-box {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-method {
+            text-align: center;
+        }
+        
+        .contact-method strong {
+            color: var(--green-dark);
+            font-size: 1.1rem;
+        }
+
+        .joy-card {
+            background: var(--green-dark);
+            color: white;
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+
+        .joy-card p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .joy-card .hearts {
+            font-size: 2rem;
+            margin-top: 1rem;
+            letter-spacing: 0.3rem;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--green-mid);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: var(--green-dark);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Leonie & Marius</h1>
+            <p>11. April 2026</p>
+        </header>
+
+        <!-- Einleitung -->
+        <div class="card">
+            <div class="intro-text">
+                <p>Wir freuen uns, dass ihr unsere Hochzeitsseite gefunden habt und wollen euch hier weitere Informationen geben.</p>
+                
+                <p style="margin-top: 1.5rem;"><strong>Auf dieser Seite haben wir folgende Themen:</strong></p>
+                <div class="topics-grid">
+                    <a href="#tagesablauf">📅 Tagesablauf</a>
+                    <a href="#fotos">📸 Fotos & Gruppenbild</a>
+                    <a href="#anreise">🚌 Anreise & Bus</a>
+                    <a href="#parken">🚗 Parkmöglichkeiten</a>
+                    <a href="#kontakt">📞 Kontakt</a>
+                    <a href="#einladung">💌 Einladung</a>
+                </div>
+
+                <div class="correction-box">
+                    Wichtiger Hinweis: Leider haben wir uns in der Einladung verschrieben. Die Party findet im <strong>Mühlweg 11 in Heidelberg-Ziegelhausen</strong> statt – da hatten sich leider zwei falsche Buchstaben eingeschlichen.
+                </div>
+            </div>
+        </div>
+
+        <!-- Foto von euch -->
+        <div class="hero-image">
+            <img src="leonie_marius1.jpg" alt="Leonie und Marius">
+        </div>
+
+        <!-- Tagesablauf -->
+        <div class="card" id="tagesablauf">
+            <h2>📅 Tagesablauf</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="time">12:30 Uhr</span>
+                    <div>
+                        <strong>Trauung</strong><br>
+                        <a href="https://www.google.com/maps/place/Merianstr.+2,+69117+Heidelberg" target="_blank">
+                            Jesuitenkirche, Merianstr. 2, 69117 Heidelberg
+                        </a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">14:00 Uhr</span>
+                    <div>
+                        <strong>Sektempfang</strong><br>
+                        Eugen-Biser-Saal an der Jesuitenkirche<br>
+                        <em style="font-size: 0.95rem; color: #555;">📸 Im Anschluss: Gruppenfoto vor der Kirche – bitte noch nicht wegzulaufen!</em>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">16:30 Uhr</span>
+                    <div>
+                        <strong>Ankommen & Fotozeit</strong><br>
+                        <a href="https://www.google.com/maps/place/Mühlweg+11,+69118+Heidelberg" target="_blank">
+                            Pfarrzentrum St Teresa, Mühlweg 11, 69118 Heidelberg-Ziegelhausen
+                        </a><br>
+                        <em style="font-size: 0.95rem; color: #555;">📸 Wir nutzen die Zeit vor dem Abendessen noch für Fotos in und um die Location.</em>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time">18:30 Uhr</span>
+                    <div>
+                        <strong>Abendessen</strong><br>
+                        <a href="https://www.google.com/maps/place/Mühlweg+11,+69118+Heidelberg" target="_blank">
+                            Pfarrzentrum St Teresa, Mühlweg 11, 69118 Heidelberg-Ziegelhausen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fotos & Gruppenbild -->
+        <div class="card" id="fotos">
+            <h2>📸 Fotos & Gruppenbild</h2>
+            <div class="info-box">
+                <p>
+                    Nach dem Sektempfang machen wir ein <strong>Gruppenfoto vor der Jesuitenkirche</strong> – bitte bleibt dafür noch einen Moment zusammen, bevor ihr euch auf den Weg nach Ziegelhausen macht!
+                </p>
+                <p>
+                    Beim Ankommen in Ziegelhausen ab <strong>16:30 Uhr</strong> nutzen wir die Zeit vor dem Abendessen noch für Fotos in und rund um das Pfarrzentrum St. Teresa – gerne mitmachen!
+                </p>
+            </div>
+        </div>
+
+        <!-- Anreise & Bus -->
+        <div class="card" id="anreise">
+            <h2>🚌 Anreise & Busverbindung</h2>
+            <div class="info-box">
+                <p>
+                    Ein paar von euch reisen ohne Auto an – vielleicht haben andere noch einen freien Platz im Auto und ihr könnt euch noch absprechen.
+                </p>
+                <p>
+                    Alternativ gibt es auch die Möglichkeit, mit dem Bus bis zur Haltestelle <strong>„Steinbacher Tal"</strong> zu fahren – von dort sind es nur etwa 5 Minuten zu Fuß zum Pfarrzentrum.
+                </p>
+            </div>
+
+            <table class="bus-table">
+                <thead>
+                    <tr>
+                        <th>Linie</th>
+                        <th>Haltestelle (Abfahrt)</th>
+                        <th>Beispielzeit</th>
+                        <th>Richtung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>34</strong></td>
+                        <td>Alte Brücke Nord</td>
+                        <td>z. B. 15:39 Uhr</td>
+                        <td>Ziegelhausen</td>
+                    </tr>
+                    <tr>
+                        <td><strong>36</strong></td>
+                        <td>Rathaus/Bergbahn</td>
+                        <td>z. B. 15:46 Uhr</td>
+                        <td>Ziegelhausen</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box" style="margin-top: 0.5rem;">
+                <p>
+                    Beide Linien fahren jeweils im 20-Minuten-Takt – durch die Kombination beider Linien gibt es insgesamt alle <strong>10 Minuten</strong> eine Abfahrtmöglichkeit. 🕐
+                </p>
+            </div>
+        </div>
+
+        <!-- Parkmöglichkeiten -->
+        <div class="card" id="parken">
+            <h2>🚗 Parkmöglichkeiten</h2>
+            <div class="parking-section">
+                <div class="parking-item">
+                    <h3>Jesuitenkirche (Innenstadt)</h3>
+                    <p>
+                        Leider gibt es in der Innenstadt keine kostenfreien Parkmöglichkeiten. 
+                        Wir empfehlen euch das 
+                        <a href="https://www.google.com/maps/place/P11+Parkhaus+Universit%C3%A4ts+Bibliothek/@49.4100986,8.7042004,225m/data=!3m2!1e3!5s0x4797c1046a97bbdf:0x2a18671759013f6a!4m14!1m7!3m6!1s0x4797c1fe397181e3:0x92d31956ef90d7ee!2sP11+Parkhaus+Universit%C3%A4ts+Bibliothek!8m2!3d49.4100878!4d8.705099!16s%2Fg%2F11flgf9hjr!3m5!1s0x4797c1fe397181e3:0x92d31956ef90d7ee!8m2!3d49.4100878!4d8.705099!16s%2Fg%2F11flgf9hjr?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Parkhaus P11</a>, 
+                        welches samstagmittags immer freie Plätze hat. 
+                        Ihr dürft aber gerne auch ein anderes Parkhaus wählen.
+                    </p>
+                    <p style="margin-top: 0.8rem; font-style: italic;">
+                        ℹ️ Achtet darauf, dass wir viele Einbahnstraßen und eine große Fußgängerzone haben.
+                    </p>
+                </div>
+                
+                <div class="parking-item">
+                    <h3>Pfarrzentrum St Teresa (Ziegelhausen)</h3>
+                    <p>
+                        Hier gibt es einen 
+                        <a href="https://www.google.com/maps/place/Mühlweg+4,+69118+Heidelberg" target="_blank">
+                            großen Parkplatz etwa 50m vor dem Pfarrzentrum auf der rechten Seite
+                        </a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kontakt -->
+        <div class="card" id="kontakt">
+            <h2>📞 Kontakt für den Tag</h2>
+            <div class="contact-box">
+                <p style="text-align: center; font-size: 1.05rem; margin-bottom: 1rem;">
+                    Bei kurzfristigen Fragen am Hochzeitstag könnt ihr euch gerne an unsere Trauzeugin <strong>Tamara</strong> wenden:
+                </p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <p style="margin-bottom: 0.5rem;">📞 Anrufen oder schreiben</p>
+                        <strong>01578 / 2438631</strong>
+                    </div>
+                    <div class="contact-method">
+                        <p style="margin-bottom: 0.5rem;">📧 Per E-Mail</p>
+                        <strong>mitgestalten@fracarolli.de</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Einladung Download -->
+        <div class="card download-section" id="einladung">
+            <h2>💌 Einladung</h2>
+            <p>Hier könnt ihr die Einladung nochmal als PDF ansehen oder herunterladen:</p>
+            <a href="einladung.pdf" class="download-btn" target="_blank">📄 Einladung ansehen</a>
+            <a href="einladung.pdf" class="download-btn" download>📥 Einladung herunterladen</a>
+        </div>
+
+        <!-- Vorfreude -->
+        <div class="joy-card">
+            <p>Wir freuen uns riesig darauf, diesen besonderen Tag mit euch zu feiern – es wird wunderschön! 🌿</p>
+            <div class="hearts">❤️ ❤️ ❤️</div>
+        </div>
+
+        <footer>
+            <p>Wir freuen uns auf euch! ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
